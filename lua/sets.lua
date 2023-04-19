@@ -80,3 +80,6 @@ opt.updatetime = 50
 
 -- Sets the column number for highlighting a specific column
 opt.colorcolumn = "80"
+
+-- Synchronize the contents of the Vim register with the system clipboard
+opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
