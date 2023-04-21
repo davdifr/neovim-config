@@ -16,4 +16,7 @@ packer.startup(function(use)
     -- Undotree visualizes the undo history and makes it easy to browse
     -- and switch between different undo branches.
     use('mbbill/undotree')
+
+    -- Indent-blankkine adds indentation guides to all lines
+    use('lukas-reineke/indent-blankline.nvim')
 end)
