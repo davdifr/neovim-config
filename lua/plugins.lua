@@ -12,4 +12,8 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     
     -- Additional plugins can be added here using the "use" function
+    
+    -- Undotree visualizes the undo history and makes it easy to browse
+    -- and switch between different undo branches.
+    use('mbbill/undotree')
 end)
