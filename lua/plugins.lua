@@ -28,4 +28,8 @@ packer.startup(function(use)
             ts_update()
         end,
     }
+
+    -- With vim-fugitive, you can perform Git commands such as 
+    -- committing, pushing, pulling, merging, and rebasing without leaving NeoVim. 
+    use('tpope/vim-fugitive')
 end)
