@@ -1,6 +1,4 @@
--- Attempt to load the nvim-treesitter.configs module
--- If successful, store the module's functions and variables in the `ts` variable
--- If there is an error, do not execute any further code
+-- Check if treesitter plugin has been loaded correctly
 local status, ts = pcall(require, "nvim-treesitter.configs")
 
 if (not status) then 

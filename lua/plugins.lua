@@ -32,4 +32,12 @@ packer.startup(function(use)
     -- With vim-fugitive, you can perform Git commands such as 
     -- committing, pushing, pulling, merging, and rebasing without leaving NeoVim. 
     use('tpope/vim-fugitive')
+
+    -- Highly customizable and extensible interface for searching, 
+    -- filtering, and previewing various types of data within Neovim.
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 end)
