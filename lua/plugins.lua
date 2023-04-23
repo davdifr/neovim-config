@@ -12,7 +12,11 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     
     -- Additional plugins can be added here using the "use" function
+   
     
+    -- Catppuccin colorscheme
+    use { "catppuccin/nvim", as = "catppuccin" }
+
     -- Undotree visualizes the undo history and makes it easy to browse
     -- and switch between different undo branches.
     use('mbbill/undotree')
@@ -39,5 +43,13 @@ packer.startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Git integration for buffers
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
     }
 end)
