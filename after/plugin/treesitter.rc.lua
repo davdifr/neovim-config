@@ -1,8 +1,8 @@
--- Check if treesitter plugin has been loaded correctly
+-- Check if the treesitter plugin has been loaded correctly
 local status, ts = pcall(require, "nvim-treesitter.configs")
 
 if (not status) then 
-  return 
+    return 
 end
 
 ts.setup {

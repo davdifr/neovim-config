@@ -1,12 +1,11 @@
 -- Check if the Telescope plugin has been loaded correctly
-local status, telescope = pcall(require, "telescope")
-
+local status, telescope = pcall(require, 'telescope')
 if (not status) then 
     return 
 end
 
 -- Load Telescope's built-in functions
-local builtin = require("telescope.builtin")
+local builtin = require('telescope.builtin')
 
 -- Set key mappings for Telescope's built-in functions
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

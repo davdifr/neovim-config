@@ -10,13 +10,13 @@ vim.cmd [[packadd packer.nvim]]
 -- Configure the "packer" plugin manager with the desired plugins
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-    
+
     -- Additional plugins can be added here using the "use" function
-    
+
     -- Catppuccin colorscheme
     use { "catppuccin/nvim", as = "catppuccin" }
 
-    -- Undotree visualizes the undo history and makes it easy to browse
+    -- Undotree visualizes the undo history and makes it easy to browse 
     -- and switch between different undo branches.
     use('mbbill/undotree')
 
@@ -51,4 +51,7 @@ packer.startup(function(use)
             require('gitsigns').setup()
         end
     }
+
+    -- Language Server Protocol (LSP)
+    use('neovim/nvim-lspconfig')
 end)
