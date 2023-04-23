@@ -12,7 +12,6 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     
     -- Additional plugins can be added here using the "use" function
-   
     
     -- Catppuccin colorscheme
     use { "catppuccin/nvim", as = "catppuccin" }
