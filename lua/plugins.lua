@@ -54,4 +54,12 @@ packer.startup(function(use)
 
     -- Language Server Protocol (LSP)
     use('neovim/nvim-lspconfig')
+
+    -- Completion plugins
+    use 'hrsh7th/cmp-buffer' -- for buffer completion
+    use 'hrsh7th/cmp-nvim-lsp' -- for LSP completion
+    use 'hrsh7th/nvim-cmp' -- main completion plugin
+
+    -- Snippet support
+    use 'L3MON4D3/LuaSnip'
 end)
