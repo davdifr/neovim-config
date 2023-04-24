@@ -29,9 +29,3 @@ cmp.setup({
         { name = 'buffer' },
     }),
 })
-
--- Set 'completeopt' to specify how the completion menu behaves and define the CmpItemKind highlight group to match the default menu.
-vim.cmd [[
-set completeopt=menuone,noinsert,noselect
-highlight! default link CmpItemKind CmpItemMenuDefault
-]]
