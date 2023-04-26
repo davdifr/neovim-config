@@ -1,3 +1,6 @@
+-- Load snippets from the specified directory using the 'luasnip' library
+require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.config/nvim/snippets/' } })
+
 -- Check if the cmp plugin has been loaded correctly
 local status, cmp = pcall(require, "cmp") 
 if (not status) then 
