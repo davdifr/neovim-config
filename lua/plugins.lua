@@ -13,8 +13,8 @@ packer.startup(function(use)
 
     -- Additional plugins can be added here using the "use" function
 
-    -- Catppuccin colorscheme
-    use { "catppuccin/nvim", as = "catppuccin" }
+    -- Colorscheme
+    use 'morhetz/gruvbox' 
 
     -- Undotree visualizes the undo history and makes it easy to browse 
     -- and switch between different undo branches.
@@ -61,12 +61,6 @@ packer.startup(function(use)
     use 'hrsh7th/nvim-cmp' -- main completion plugin
 
     -- Snippet support
-    use({
-        "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        tag = "v<CurrentMajor>.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!:).
-        run = "make install_jsregexp"
-    })
+    use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
 end)
