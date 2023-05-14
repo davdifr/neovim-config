@@ -26,6 +26,9 @@ ts.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
+    autotag = {
+        enable = true,
+    },
 }
 
 -- Users of packer.nvim have reported that when using treesitter for folds, 

@@ -10,7 +10,6 @@ vim.cmd [[packadd packer.nvim]]
 -- Configure the "packer" plugin manager with the desired plugins
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-
     -- Additional plugins can be added here using the "use" function
 
     -- Colorscheme
@@ -23,6 +22,15 @@ packer.startup(function(use)
     -- Indent-blankkine adds indentation guides to all lines
     use('lukas-reineke/indent-blankline.nvim')
 
+    -- Autopairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- Autoclose and autorename html tag
+    use 'windwp/nvim-ts-autotag'
+    
     -- Treesitter enables you to generate concrete syntax tree from any language it supports
     use {
         'nvim-treesitter/nvim-treesitter',

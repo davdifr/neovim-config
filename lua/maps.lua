@@ -1,6 +1,24 @@
 -- Creation of a 'keymap' variable to avoid repeating 'vim.keymap'
 local keymap = vim.keymap
 
+-- Use jj as a shortcut for Esc in Insert mode 
+keymap.set('i', 'jj', '<Esc>')
+
+-- Use space as leader
+vim.g.mapleader = ' '
+
+-- Shortcuts for deleting and yanking text
+keymap.set('n', '<leader>d', 'dd')
+keymap.set('n', '<leader>y', 'yy')
+
+-- Shortcuts for moving to the start and end of a line
+keymap.set({'n', 'v'}, '<leader>h', '0')
+keymap.set({'n', 'v'}, '<leader>l', '$')
+
+-- Shortcuts for saving and quitting
+keymap.set('n', '<leader>w', ':w<CR>')
+keymap.set('n', '<leader>q', ':q<CR>')
+
 -- Key mappings for increment/decrement
 keymap.set('n', '+', '<C-a>') -- increment number under cursor
 keymap.set('n', '-', '<C-x>') -- decrement number under cursor
@@ -18,16 +36,10 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true }) -- open new tab
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true }) -- split window horizontally
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true }) -- split window vertically
 
-keymap.set('n', '<Space>', '<C-w>w') -- cycle between windows
-keymap.set('', 's<left>', '<C-w>h') -- move focus to the window to the left
-keymap.set('', 's<up>', '<C-w>k') -- move focus to the window above
-keymap.set('', 's<down>', '<C-w>j') -- move focus to the window below
-keymap.set('', 's<right>', '<C-w>l') -- move focus to the window to the right
-
-keymap.set('', 'sh', '<C-w>h') -- alias for s<left>
-keymap.set('', 'sk', '<C-w>k') -- alias for s<up>
-keymap.set('', 'sj', '<C-w>j') -- alias for s<down>
-keymap.set('', 'sl', '<C-w>l') -- alias for s<right>
+keymap.set('', '<C-h>', '<C-w>h') 
+keymap.set('', '<C-k>', '<C-w>k')
+keymap.set('', '<C-j>', '<C-w>j')
+keymap.set('', '<C-l>', '<C-w>l')
 
 keymap.set('n', '<C-w><left>', 'C-w><') -- decrease window width
 keymap.set('n', '<C-w><right>', 'C-w>>') -- increase window width
