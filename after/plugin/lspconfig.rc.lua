@@ -13,6 +13,14 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.html.setup {
+  capabilities = capabilities,
+}
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
